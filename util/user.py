@@ -51,8 +51,10 @@ class UserMixin:
                 return None
             
             while len(password) < 6:
-                print("Passowords must atleast be 6 characters.")
+                print("Passowords must atleast be 6 characters (leave blank to cancel).")
                 password = input("Enter password: ")
+                if not password:
+                    return None
 
             verify_pass = input("Verify password: ")
             while verify_pass != password:
@@ -76,7 +78,7 @@ class UserMixin:
 
         while True:
             
-            username = input("Enter username (Press Enter to return to main menu.): ")
+            username = input("Enter username (leave blank to cancel): ")
             if not username:
                 return None
             
@@ -88,11 +90,16 @@ class UserMixin:
                         if username in user_info:
                             userame_exist = True
                             
-                            password = input("Enter password: ")
+                            password = input("Enter password (leave blank to cancel): ")
                             if not password:
                                 return None
+                            
                             while password != user_info[username]['Password']:
                                 print("Invalid credentials. Please try again")
+                                password = input('Re-enter your password (leave blank to cancel): ')
+                                if not password:
+                                    return None
+
                             print(f"Login Succesful. Welcome {username}.")
 
                             return username

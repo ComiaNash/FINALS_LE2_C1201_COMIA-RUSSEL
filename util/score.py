@@ -20,7 +20,7 @@ class Score(UserMixin):
                             print(f'{username} has no games played yet. Play a game to see score')
                             break
                         else:
-                            print(f"Username: {username} Score: {record['score']} Stage: {record['stage']} Date: {record['date']}")
+                            print(f"Username: {username}, Score: {record['score']}, Stage: {record['stage']}, Date: {record['date']}")
                               
             except ValueError as e:
                 print(f'Error. {e}')
@@ -68,4 +68,4 @@ class Score(UserMixin):
                 print(f'{username} has no games played yet. Play a game to see top scores.')
                 break
             else:
-                print(f"Username: {username} Score: {record['score']} Stage: {record['stage']}, Time: {record['date']}")
+                print(f"Username: {username}, Score: {record['score']}, Stage: {record['stage']}, Time: {record['date']}")

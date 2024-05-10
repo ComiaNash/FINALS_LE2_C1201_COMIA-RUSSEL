@@ -27,20 +27,23 @@ class Mangager:
                     game.play(username)
                     self.menu(username)
                     break
-                if choice =='2':
+                elif choice =='2':
                     score = Score()
                     score.top_score(username)
                     self.menu(username)
                     break
-                if choice == '3':
+                elif choice == '3':
                     score = Score()
                     score.load()
                     self.menu(username)
                     break
-                if choice =='4':
+                elif choice =='4':
                     self.logout()
                     self.main()
                     break
+                else:
+                    print("Invalid Input. Please try again.")
+                    continue
 
             except ValueError as e:
                 print(f'Error. {e}')

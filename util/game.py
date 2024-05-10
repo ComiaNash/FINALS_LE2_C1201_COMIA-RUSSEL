@@ -44,20 +44,24 @@ class DiceGame(UserMixin):
                 player_score += 3
 
                 print(f"\nPlayer wins this stage. Score :{player_score} Stage: {game_stage}") 
-                try:
-                    choice = input("\nDo you want to continue to the next stage (1 for Yes, 0 for No): ").lower().strip()
-                    if choice != '1':
-                        instance = Score()
-                        current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-                        #print(username, player_score, game_stage, current_time)
-                        instance.save(username, player_score, game_stage, current_time)
-                        break
-                    else:
-                        print('Invalid Input. Please enter 1 for Yes or 0 for No.')
-                except ValueError as e:
-                        print(f"Invalid input {e} ")
 
-            if player_turn_score < cpu_turn_score:
+                while True:
+                    try:
+                        choice = input("\nDo you want to continue to the next stage (1 for Yes, 0 for No): ").lower().strip()
+                        if choice == '1':
+                            break
+                        elif choice =='0':
+                            instance = Score()
+                            current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                            #print(username, player_score, game_stage, current_time)
+                            instance.save(username, player_score, game_stage, current_time)
+                            return
+                        else:
+                            print('Invalid Input. Please enter 1 for Yes or 0 for No.')
+                    except ValueError as e:
+                            print(f"Invalid input {e} ")
+
+            else:
                 game_stage = 0
                 player_score = 0
                 print(f"You lost this stage {username}.\nCpu wins. Game over. You didn't win any stage.")
