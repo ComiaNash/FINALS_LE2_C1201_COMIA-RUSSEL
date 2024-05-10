@@ -19,10 +19,9 @@ class DiceGame(UserMixin):
             turn = 0
             player_turn_score = 0
             cpu_turn_score = 0
-            
+
             while turn < 3:
              
-                
                 player = random.randint(1,6)
                 cpu = random.randint(1,6)
 
