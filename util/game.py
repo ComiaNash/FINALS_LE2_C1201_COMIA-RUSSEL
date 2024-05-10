@@ -17,10 +17,11 @@ class DiceGame(UserMixin):
         while True:
 
             turn = 0
-       
+            player_turn_score = 0
+            cpu_turn_score = 0
+            
             while turn < 3:
-                player_turn_score = 0
-                cpu_turn_score = 0
+             
                 
                 player = random.randint(1,6)
                 cpu = random.randint(1,6)
