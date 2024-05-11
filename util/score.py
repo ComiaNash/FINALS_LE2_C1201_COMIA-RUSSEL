@@ -62,10 +62,13 @@ class Score(UserMixin):
             records[username] = user_info['Record']
         
         sorted_records = sorted(records.items(), key= lambda x:x[1]['score'], reverse= True)
-        print('Scores')
+        print('Scores:')
+        i = 0
         for username, record in sorted_records:
+            
             if record['score'] == 0:
                 print(f'{username} has no games played yet. Play a game to see top scores.')
                 break
             else:
-                print(f"Username: {username}, Score: {record['score']}, Stage: {record['stage']}, Time: {record['date']}")
+                i +=1
+                print(f"{i}. Username: {username}, Score: {record['score']}, Stage: {record['stage']}, Time: {record['date']}")
