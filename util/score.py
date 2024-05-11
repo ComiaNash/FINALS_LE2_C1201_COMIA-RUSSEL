@@ -49,8 +49,6 @@ class Score(UserMixin):
         records = {}
         with open(self.userpath) as file:
             user_info = file.readlines()
-            if user_info == None:
-                return print("No records yet")
             for line in user_info:
                 user_info = ast.literal_eval(line.strip())
                 #store dicts in self.dict 

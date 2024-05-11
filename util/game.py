@@ -1,15 +1,10 @@
 import random
-from util.user import UserMixin 
 from util.score import Score
 from datetime import datetime
 
 
-class DiceGame(UserMixin):
-    
-    def __init__(self) -> None:
-        
-        super().__init__()
-    
+class DiceGame:
+     
     def play(self, username):
        
         game_stage = 0

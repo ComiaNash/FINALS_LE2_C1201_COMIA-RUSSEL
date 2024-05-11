@@ -39,7 +39,6 @@ class Mangager:
                     break
                 elif choice =='4':
                     self.logout()
-                    self.main()
                     break
                 else:
                     print("Invalid Input. Please try again.")
