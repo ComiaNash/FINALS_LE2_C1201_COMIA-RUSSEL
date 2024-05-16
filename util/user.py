@@ -111,5 +111,3 @@ class UserMixin:
                 print("\nUser Does not exist. Please try again. (Press Enter to return to main menu.)")
                 continue
 
-#Object = UserMixin()
-#Object.Register()

@@ -1,7 +1,7 @@
-from util.classmanager import Mangager
+from util.classmanager import Manager
 
 
-instance = Mangager()
+instance = Manager()
 
 if __name__ == '__main__':
     instance.main()

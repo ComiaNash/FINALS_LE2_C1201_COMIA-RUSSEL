@@ -62,12 +62,5 @@ class DiceGame:
                 print(f"You lost this stage {username}.\nCpu wins. Game over. You didn't win any stage.")
                 break
           
-            
-
-   
         
-
-#instance = DiceGame()
-#instance.top_score()
-
                 

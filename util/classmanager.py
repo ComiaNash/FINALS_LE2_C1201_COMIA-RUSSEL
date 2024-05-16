@@ -3,9 +3,8 @@ import sys
 from util.game import DiceGame
 from util.user import UserMixin
 from util.score import Score
-class Mangager:
-    def __init__(self) -> None:
-        pass
+
+class Manager:
         
     def logout(self):
         self.main()
@@ -76,7 +75,7 @@ class Mangager:
                     time.sleep(1)
                     sys.exit("Terminating program...")
                 else:
-                    print("Invalid choice Pleae try again.")
+                    print("Invalid choice Please try again.")
             except ValueError as e:
                 print(f"Invalid Input. {e}")
         
