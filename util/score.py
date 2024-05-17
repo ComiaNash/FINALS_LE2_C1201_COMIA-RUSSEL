@@ -3,8 +3,6 @@ from util.user import UserMixin
 
 class Score(UserMixin):
     def __init__(self) -> None:
-        self.sorted_score = {}
-
         super().__init__()
      
      
